@@ -20,6 +20,7 @@ local function fetch_font_names()
 end
 
 -- TODO: adjust the font width to fit the alpha dashbaard
+-- TODO: save the 'font_names' table for reuse since it is not changed often (if at all)
 function M.asciify(text)
   local font_names = fetch_font_names()
   local chosen_font = font_names[math.random(#font_names)]
